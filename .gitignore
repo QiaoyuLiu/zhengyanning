@@ -73,4 +73,5 @@ fabric.properties
 *.XLS
 *.spec
 build/
+dist/
 __pychache__/

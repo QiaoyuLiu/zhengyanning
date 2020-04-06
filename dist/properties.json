@@ -1,0 +1,26 @@
+{"rules":[
+    {
+        "name":  "test",
+        "Sales Group": ["Ford"],
+        "Manufacturer": ["Ford","Mazda","Volkswagen"]
+    },
+    {
+        "name":  "test2",
+        "Sales Group": [],
+        "Manufacturer": ["Ford","Mazda","Volkswagen"],
+        "excludes":{
+            "Sales Group": ["Ford"]
+        }
+    },
+    {
+        "name":  "test3",
+        "Sales Group": ["Ford"],
+        "Manufacturer": ["Ford","Mazda","Volkswagen"]
+    }
+],
+
+"selects": ["Jan 2019", "Feb 2019", "Mar 2019"],
+"indexRow": 5,
+"fileName": "IHS_LV_Production_Base_Global_2020M03_27th Mar.XLS",
+"outPutFileName": "Result.xls"
+}

@@ -1,0 +1,167 @@
+{"rules":[
+    {
+        "name":  "FAW-VW",
+        "Country": ["China"],
+        "GVW Rating":["0-3.5"],
+        "Sales Parent":["Volkswagen"],
+        "Manufacturer":["FAW-VW"]
+    },
+    {
+        "name":  "SVW",
+        "Country": ["China"],
+        "GVW Rating":["0-3.5"],
+        "Sales Parent":["Volkswagen"],
+        "Manufacturer":["SAIC-VW"]
+    },
+    {
+        "name":  "DRAC",
+        "Country": ["China"],
+        "GVW Rating":["0-3.5"],
+        "Sales Parent":["Renault-Nissan-Mitsubishi"],
+        "Production Brand":["Renault"]
+    },
+    
+    { 
+        "name":  "Nissan",
+        "Country": ["China"],
+        "GVW Rating":["0-3.5"],
+        "Sales Parent":["Renault-Nissan-Mitsubishi"],
+        "Production Brand":["Nissan","Infiniti"]
+    },
+
+    {  
+        "name":  "Great Wall",
+        "Country": ["China"],
+        "GVW Rating":["0-3.5"],
+        "Sales Parent":["Great Wall"],
+        "Manufacturer":["Great Wall"]
+
+    },
+    {  
+        "name":  "Geely",
+        "Country": ["China"],
+        "GVW Rating":["0-3.5"],
+        "Sales Parent":["Geely"],
+        "Manufacturer":["Geely"],
+        "excludes":{"Production Brand":["Polestar","Volvo"]}
+
+
+    },
+    {  
+        "name":  "Volvo Cars",
+        "Country": ["China"],
+        "GVW Rating":["0-3.5"],
+        "Sales Parent":["Geely"],
+        "Manufacturer":["Geely"],
+        "Production Brand":["Volvo"]
+
+    },
+    {  
+        "name":  "GAC",
+        "Country": ["China"],
+        "GVW Rating":["0-3.5"],
+        "Sales Parent":["Guangzhou Auto"],
+        "Production Brand":["Guangzhou Auto"]
+
+    },
+    {  
+        "name":  "SGMW",
+        "Country": ["China"],
+        "GVW Rating":["0-3.5"],
+        "Sales Parent":["SAIC-General Motors-Wuling"],
+        "Manufacturer":["SAIC-GM-Wuling"]
+
+    },
+    {  
+        "name":  "DFSK",
+        "Country": ["China"],
+        "GVW Rating":["0-3.5"],
+        "Sales Parent":["Dongfeng"],
+        "Manufacturer":["Dongfeng-Yuan"],
+        "Production Brand":["Dongfeng"]
+
+    },
+    {  
+        "name":  "Changan",
+        "Country": ["China"],
+        "GVW Rating":["0-3.5"],
+        "Sales Parent":["Changan"]
+
+    },
+    {  
+        "name":  "SGM",
+        "Country": ["China"],
+        "GVW Rating":["0-3.5"],
+        "Sales Parent":["General Motors"],
+        "Manufacturer":["SAIC-GM"]
+
+    },
+    {  
+        "name":  "CJLR",
+        "Country": ["China"],
+        "GVW Rating":["0-3.5"],
+        "Sales Parent":["Tata"],
+        "Manufacturer":["Chery-Tata"]
+
+    },
+    {  
+        "name":  "Changan Ford",
+        "Country": ["China"],
+        "GVW Rating":["0-3.5"],
+        "Sales Parent":["Ford"],
+        "Manufacturer":["Changan-Ford"],
+        "Production Brand":["Lincoln","Ford"]
+
+    },
+    {  
+        "name":  "JMC",
+        "Country": ["China"],
+        "GVW Rating":["0-3.5"],
+        "Sales Parent":["Ford"],
+        "Manufacturer":["Jiangling Motors"],
+        "Production Brand":["Ford"]
+
+    },
+    {  
+        "name":  "Chery",
+        "Country": ["China"],
+        "GVW Rating":["0-3.5"],
+        "Sales Parent":["Chery"]
+
+    },
+    {  
+        "name":  "BYD",
+        "Country": ["China"],
+        "GVW Rating":["0-3.5"],
+        "Sales Parent":["BYD"]
+
+    },
+    {  
+        "name":  "BAIC",
+        "Country": ["China"],
+        "GVW Rating":["0-3.5"],
+        "Sales Parent":["BAIC"],
+        "excludes":{"Manufacturer":["Beijing-Benz","Changhe-Suzuki"]}
+
+    },
+    {  
+        "name":  "LD_ALL",
+        "Country": ["China"],
+        "GVW Rating":["0-3.5"]
+
+    },
+    {  
+        "name":  "LDT_ALL",
+        "Country": ["China"],
+        "GVW Rating":["3.5-6"]
+
+    }
+],
+
+"selects": ["May 2019", "Jun 2019", "Jul 2019", "Aug 2019", "May 2020", "Jun 2020", "Jul 2020","Aug 2020"],
+"indexRow": 5,
+"fileName": "IHS_LV_Production_Base_Global_2020M05.XLS",
+"outputFileName": "IHS-LV.xls",
+"sheetName":"LVP Production",
+"outputSheetName": "IHS-LV"
+}

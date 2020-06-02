@@ -1,6 +1,7 @@
 import pandas as pd
 import copy
-import xlwt
+from openpyxl import load_workbook
+import xlwings as xlw
 
 def getDataFrame(fileName, header = 5, sheetName = 0):
     df = pd.read_excel(fileName, sheet_name = sheetName, header = header-1)
@@ -46,4 +47,18 @@ def writeDataToExcel(fileName, name, dataFrame):
     if name == None:
         dataFrame.to_excel(fileName)
     else: 
-        dataFrame.to_excel(fileName,sheet_name = name)
+        '''
+        excelApp = xlw.App(False,False)
+        exFile = excelApp.books.open(fileName)
+        sheets = exFile.sheets
+        sheetsNamesList = [sheet.name for sheet in sheets]
+        if not name in sheetsNamesList:
+            exFile.sheets.add(name)
+        exFile.save(fileName)
+        exFile.close()
+        '''
+        print(name)
+        writer = pd.ExcelWriter(fileName)
+        dataFrame.to_excel(writer,sheet_name = name)
+        writer.save()
+        writer.close()

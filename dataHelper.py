@@ -1,7 +1,6 @@
 import pandas as pd
 import copy
 from openpyxl import load_workbook
-import xlwings as xlw
 
 def getDataFrame(fileName, header = 5, sheetName = 0):
     df = pd.read_excel(fileName, sheet_name = sheetName, header = header-1)
@@ -16,15 +15,23 @@ def filterFrame(dataFrame, rule, selects):
             if prop == "excludes":
                 excludes = rule[prop]
                 for exclude in excludes:
+                    # Set initial condition as "True" to make sure excluding nothing if "exludes" array is empty or match nothing.
                     excludeFilterConditions = True
                     for item in excludes[exclude]:
+                        # Add the target which includes item
+                        if isinstance(item,dict):
+                            excludeFilterConditions = excludeFilterConditions | (data[exclude].str.contains(item["like"]))
                         excludeFilterConditions = excludeFilterConditions & (data[exclude] !=item )
                     data = data.loc[excludeFilterConditions]
             else:
                 filters.append(prop)
+                # Similar as excludes
                 filterConditions = False
                 if rule[prop] != []:
                     for item in rule[prop]:
+                        if isinstance(item, dict):
+                            filterConditions = filterConditions | (data[prop].str.contains(item["like"]))
+                            print(data[prop].str.contains(item["like"]))
                         filterConditions = filterConditions | (item == data[prop])
                     data = data.loc[filterConditions]
     mixedFilters = filters + selects

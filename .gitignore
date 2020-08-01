@@ -75,3 +75,4 @@ fabric.properties
 build/
 dist/
 __pychache__/
+.DS_Store/
